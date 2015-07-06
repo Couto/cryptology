@@ -5,6 +5,13 @@ import SimpleSubstitution from '../../lib/SimpleSubstitution.js';
 
 describe('Simple Substitution Cypher', () => {
 
+  describe('alphabet', () => {
+    it('should have an alphabet', () => {
+      expect(SimpleSubstitution.ALPHABET).to.be.a('string');
+      expect(SimpleSubstitution.ALPHABET.length).to.equal(26);
+    });
+  });
+
   describe('generateKey', () => {
 
     it('should return a 26 length string', () => {
@@ -43,4 +50,21 @@ describe('Simple Substitution Cypher', () => {
     });
   });
 
+  it('Convert plaintext to cyphertext', () => {
+    let key = 'zyxwvutsrqponmlkjihgfedcba';
+    let simpleSubstitution = new SimpleSubstitution(key);
+    let plaintext = 'abc';
+    let cyphertext = 'zyx';
+
+    expect(simpleSubstitution.encypher(plaintext)).to.equal(cyphertext);
+  });
+
+  it('Revert cyphertext to plaintext', () => {
+    let key = 'zyxwvutsrqponmlkjihgfedcba';
+    let simpleSubstitution = new SimpleSubstitution(key);
+    let plaintext = 'abc';
+    let cyphertext = 'zyx';
+
+    expect(simpleSubstitution.decypher(cyphertext)).to.equal(plaintext);
+  });
 });
