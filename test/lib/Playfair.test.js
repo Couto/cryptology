@@ -3,7 +3,7 @@
 import {expect} from 'chai';
 import Playfair from '../../lib/Playfair.js';
 
-describe('Playfair Cypher', () => {
+describe.only('Playfair Cypher', () => {
 
   describe('generateKey', () => {
 
@@ -42,6 +42,16 @@ describe('Playfair Cypher', () => {
           occurrences.push(letter);
         });
       });
+    });
+  });
+
+  describe('Preprocess', () => {
+    let plaintext = 'natterjack toad';
+    let preprocessed = 'na tz te ri ac kt oa dz';
+    let playfair = new Playfair(Playfair.generateKey());
+
+    it('should preprocess the plaintext correctly', () => {
+      expect(playfair._preprocess(plaintext)).to.equal(preprocessed);
     });
   });
 
