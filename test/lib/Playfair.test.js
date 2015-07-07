@@ -3,7 +3,7 @@
 import {expect} from 'chai';
 import Playfair from '../../lib/Playfair.js';
 
-describe.only('Playfair Cypher', () => {
+describe('Playfair Cipher', () => {
 
   describe('generateKey', () => {
 
@@ -15,14 +15,12 @@ describe.only('Playfair Cypher', () => {
     });
 
     it('should contain 5 letters in each row', () => {
-
       key.forEach((row) => {
         expect(row).to.have.length(5);
         row.forEach((letter) => {
           expect(letter).to.match(/[a-z]/);
         });
       });
-
     });
 
     it('should not contain the letter `j`', () => {
@@ -57,7 +55,7 @@ describe.only('Playfair Cypher', () => {
 
   describe('With given key', () => {
     let plaintext = 'natterjack toad';
-    let cyphertext = 'dndwsrhfcgfsptbd';
+    let ciphertext = 'dndwsrhfcgfsptbd';
     let key = [
       ['s', 't', 'a', 'n', 'd'],
       ['e', 'r', 'c', 'h', 'b'],
@@ -67,12 +65,12 @@ describe.only('Playfair Cypher', () => {
     ];
     let playfair = new Playfair(key);
 
-    it('Convert plaintext to cyphertext', () => {
-      expect(playfair.encypher(plaintext)).to.equal(cyphertext);
+    it('Convert plaintext to ciphertext', () => {
+      expect(playfair.encipher(plaintext)).to.equal(ciphertext);
     });
 
-    it('Revert cyphertext to plaintext', () => {
-      expect(playfair.decypher(cyphertext)).to.equal(plaintext);
+    it('Revert ciphertext to plaintext', () => {
+      expect(playfair.decipher(ciphertext)).to.equal(plaintext);
     });
 
   });

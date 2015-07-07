@@ -3,7 +3,7 @@
 import {expect} from 'chai';
 import SimpleSubstitution from '../../lib/SimpleSubstitution.js';
 
-describe('Simple Substitution Cypher', () => {
+describe('Simple Substitution Cipher', () => {
 
   describe('alphabet', () => {
     it('should have an alphabet', () => {
@@ -50,21 +50,21 @@ describe('Simple Substitution Cypher', () => {
     });
   });
 
-  it('Convert plaintext to cyphertext', () => {
+  it('Convert plaintext to ciphertext', () => {
     let key = 'zyxwvutsrqponmlkjihgfedcba';
     let simpleSubstitution = new SimpleSubstitution(key);
     let plaintext = 'abc';
-    let cyphertext = 'zyx';
+    let ciphertext = 'zyx';
 
-    expect(simpleSubstitution.encypher(plaintext)).to.equal(cyphertext);
+    expect(simpleSubstitution.encipher(plaintext)).to.equal(ciphertext);
   });
 
-  it('Revert cyphertext to plaintext', () => {
+  it('Revert ciphertext to plaintext', () => {
     let key = 'zyxwvutsrqponmlkjihgfedcba';
     let simpleSubstitution = new SimpleSubstitution(key);
     let plaintext = 'abc';
-    let cyphertext = 'zyx';
+    let ciphertext = 'zyx';
 
-    expect(simpleSubstitution.decypher(cyphertext)).to.equal(plaintext);
+    expect(simpleSubstitution.decipher(ciphertext)).to.equal(plaintext);
   });
 });
