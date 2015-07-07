@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "webpack-dev-server 'mocha!./test/index.test.js'",
-    "start": "webpack-dev-server --config webpack.config.js"
+    "test": "webpack-dev-server --hot 'mocha!./test/index.test.js'"
   },
   "author": "Luis Couto <hello@luiscouto.pt>",
   "license": "ISC",

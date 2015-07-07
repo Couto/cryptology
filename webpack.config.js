@@ -11,9 +11,11 @@ module.exports = {
   devtool: 'eval',
 
   entry: [
-    './lib/Cypher.js',
+    'webpack/hot/dev-server',
+    './lib/Cipher.js',
     './lib/Caesar.js',
     './lib/SimpleSubstitution.js',
+    './lib/Playfair.js',
   ],
 
   output: {
@@ -51,6 +53,6 @@ module.exports = {
   devServer: {
     inline: true,
     quiet: false,
-    // hot: true
+    hot: true
   }
 };
