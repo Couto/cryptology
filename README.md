@@ -5,14 +5,12 @@ This is a small repository with my attempt to implement some historical cryptogr
 Current implementations are quite naïve, and no security or optimization measures are considered while implementing them, also most of these algorithms are no longer considered secure, so don't even attempt to use them in real applications.
 
 ## Implemented Ciphers
- * [Caesar Cipher]()
- * [Simple Substituition Cipher]()
- * [Playfair Cipher (WIP)](https://en.wikipedia.org/wiki/Playfair_cipher)
-
-## Planned Ciphers
- * [Vigenère Cipher]()
- * [Affine Cipher]()
- * [Enigma Cipher]()
+ * [x] [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+ * [x] [Simple Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
+ * [x] [Playfair Cipher](https://en.wikipedia.org/wiki/Playfair_cipher)
+ * [ ] [Vigenère Cipher]()
+ * [ ] [Affine Cipher]()
+ * [ ] [Enigma Cipher]()
 
 ## Instructions
 
