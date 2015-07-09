@@ -56,6 +56,7 @@ describe('Playfair Cipher', () => {
   describe('With given key', () => {
     let plaintext = 'natterjack toad';
     let ciphertext = 'dndwsrhfcgfsptbd';
+    let resolvedPlaintext = 'natzteriacktoadz';
     let key = [
       ['s', 't', 'a', 'n', 'd'],
       ['e', 'r', 'c', 'h', 'b'],
@@ -70,7 +71,7 @@ describe('Playfair Cipher', () => {
     });
 
     it('Revert ciphertext to plaintext', () => {
-      expect(playfair.decipher(ciphertext)).to.equal(plaintext);
+      expect(playfair.decipher(ciphertext)).to.equal(resolvedPlaintext);
     });
 
   });
