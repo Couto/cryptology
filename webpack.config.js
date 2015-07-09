@@ -1,5 +1,3 @@
-var path = require('path');
-var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -8,20 +6,7 @@ module.exports = {
 
   debug: true,
 
-  devtool: 'eval',
-
-  entry: [
-    'webpack/hot/dev-server',
-    './lib/Cipher.js',
-    './lib/Caesar.js',
-    './lib/SimpleSubstitution.js',
-    './lib/Playfair.js',
-  ],
-
-  output: {
-    path: './dist',
-    filename: '[name].[hash].js'
-  },
+  devtool: 'eval-inline',
 
   plugins: [
     new HtmlWebpackPlugin()
@@ -31,7 +16,7 @@ module.exports = {
     preLoaders: [
       {
         test: /\.js/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         loaders: [
           'jshint',
           'jscs'
@@ -41,7 +26,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         loader: 'babel',
         query: {
           stage: 2
