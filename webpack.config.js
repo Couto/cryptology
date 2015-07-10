@@ -6,11 +6,9 @@ module.exports = {
 
   debug: true,
 
-  devtool: 'eval-inline',
+  devtool: 'eval',
 
-  plugins: [
-    new HtmlWebpackPlugin()
-  ],
+  plugins: [new HtmlWebpackPlugin()],
 
   module: {
     preLoaders: [
