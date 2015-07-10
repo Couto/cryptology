@@ -1,9 +1,8 @@
 {
   "browser": true,
-  "jquery": true,
   "node": true,
-  "mocha": true,
   "esnext": true,
+  "mocha": true,
 
   "camelcase": true,
   "eqeqeq": true,
