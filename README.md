@@ -8,7 +8,7 @@ Current implementations are quite naïve, and no security or optimization measur
  * [x] [Caesar Cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
  * [x] [Simple Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
  * [x] [Playfair Cipher](https://en.wikipedia.org/wiki/Playfair_cipher)
- * [x] [Vigenère Cipher](https://en.wikipedia.org/wiki/Viginere_cipher)
+ * [x] [Vigenère Cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
  * [ ] [Affine Cipher]()
  * [ ] [Enigma Cipher]()
 
